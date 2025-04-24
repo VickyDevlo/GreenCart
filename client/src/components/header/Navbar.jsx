@@ -32,8 +32,11 @@ const Navbar = () => {
           <img src={assets.logo} alt="logo" />
         </NavLink>
         <button
-        onClick={()=>navigate('/seller')}
-         className="mx-2 text-[12px] md:text-xs text-primary/80 border border-primary/60 rounded-full px-2 py-1 hover:bg-primary-dull/10 font-medium cursor-pointer transition-all">
+          onClick={() => navigate("/seller")}
+          className="mx-2 text-[12px] md:text-xs text-primary/80 sm:border
+          border-primary/60 rounded-full sm:px-2 sm:py-1
+           hover:bg-primary-dull/10 font-medium cursor-pointer transition-all"
+        >
           Seller Dashboard
         </button>
         <div className="hidden sm:flex items-center gap-6">
