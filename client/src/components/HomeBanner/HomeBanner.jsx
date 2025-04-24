@@ -15,8 +15,9 @@ const HomeBanner = () => {
         alt="banner"
         className="w-full md:hidden"
       />
-      <div className="absolute inset-0 flex flex-col items-center md:items-start justify-end md:justify-center pb-24 md:pb-0 px-4 md:pl-16 lg:pl-24">
-        <h1 className="text-3xl md:text-4xl lg:text-5xl opacity-65 font-bold text-center md:text-left max-w-72 md:max-w-md lg:max-w-[105] leading-tight lg:leading-16">
+      <div className="absolute inset-0 flex flex-col items-center md:items-start justify-end md:justify-center pb-5 md:pb-0 px-4 md:pl-16 lg:pl-24">
+      <h1 className="text-3xl md:text-4xl lg:text-5xl opacity-65 font-bold text-center md:text-left max-w-[410px] leading-tight lg:leading-[4rem]">
+
           Freshness You Can Trust, Savings You will Love!
         </h1>
         <div className="flex items-center mt-6 font-medium">
