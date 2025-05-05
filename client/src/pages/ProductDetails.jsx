@@ -106,6 +106,7 @@ const ProductDetails = () => {
                 onClick={() => {
                   addToCart(product._id);
                   navigate("/cart");
+                  scrollTo(0, 0);
                 }}
                 className="w-full py-3.5 cursor-pointer font-medium bg-primary text-white hover:bg-primary-dull transition"
               >
