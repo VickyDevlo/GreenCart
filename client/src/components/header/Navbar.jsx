@@ -10,6 +10,7 @@ const Navbar = () => {
     user,
     setUser,
     navigate,
+    showUserLogin,
     setShowUserLogin,
     searchQuery,
     setSearchQuery,
@@ -23,6 +24,12 @@ const Navbar = () => {
   useEffect(() => {
     searchQuery.length > 0 && navigate("/products");
   }, [searchQuery]);
+
+  useEffect(() => {
+    showUserLogin
+      ? (document.body.style.overflow = "hidden")
+      : (document.body.style.overflow = "auto");
+  }, [showUserLogin]);
 
   return (
     <nav className=" border-b border-gray-300">
