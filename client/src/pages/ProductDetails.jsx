@@ -36,7 +36,7 @@ const ProductDetails = () => {
           <Link to={`/products/${product.category.toLowerCase()}`}>
             {product.category}
           </Link>
-          /<span className="text-primary"> {product.name}</span>
+          /<span className="text-primary">{product.name}</span>
         </p>
 
         <div className="flex flex-col md:flex-row gap-16 mt-4">
@@ -53,7 +53,7 @@ const ProductDetails = () => {
               ))}
             </div>
 
-            <div className="border border-gray-500/30 max-w-100 rounded overflow-hidden">
+            <div className="border bg-primary-dull/10 border-gray-500/30 max-w-100 rounded overflow-hidden">
               <img src={thumbnail} alt="Selected product" />
             </div>
           </div>

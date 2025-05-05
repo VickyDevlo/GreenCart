@@ -45,13 +45,16 @@ const Cart = () => {
     cartItems && (
       <div className="flex flex-col md:flex-row mt-16 container mx-auto">
         {/* Cart Items Section */}
-        <div className="flex-1 max-w-3xl overflow-y-auto px-4 md:max-h-[calc(100vh-130px)]">
-          <div className="sticky top-0 z-50 shadow backdrop-blur-md flex items-center md:justify-between justify-center flex-wrap gap-2 md:gap-0 px-4 py-6 mb-6">
+        <div className="flex-1 max-w-3xl overflow-y-auto md:px-4 md:max-h-[calc(100vh-130px)]">
+          <div className="sticky top-0 z-50  w-full shadow flex items-center justify-between flex-wrap gap-2 overflow-hidden backdrop-blur-md md:gap-0 md:px-4 py-6 mb-6">
             <h1 className="md:text-3xl font-medium">
-              Shopping Cart{" "}
-              <span className="text-sm text-primary">
-                ({getCartCount()} Items)
-              </span>
+              Shopping Cart
+              {getCartCount() >= 1 ? (
+                <span className="text-sm text-primary">
+                  &nbsp; ({getCartCount()}{" "}
+                  {getCartCount() <= 1 ? "Item" : "Items"})
+                </span>
+              ) : null}
             </h1>
             <button
               onClick={() => navigate("/products")}
@@ -98,7 +101,8 @@ const Cart = () => {
                     );
                     scrollTo(0, 0);
                   }}
-                  className="cursor-pointer w-24 h-24 flex items-center justify-center border border-gray-300 rounded"
+                  className="cursor-pointer w-24 h-24 flex items-center justify-center border bg-primary-dull/10
+                   border-gray-300 rounded"
                 >
                   <img
                     className="max-w-full h-full object-cover"
@@ -209,7 +213,7 @@ const Cart = () => {
             <p className="text-sm font-medium uppercase mt-6">Payment Method</p>
             <select
               onChange={(e) => setPaymentOption(e.target.value)}
-              className="w-full border border-gray-300 bg-white px-3 py-2 mt-2 outline-none"
+              className="w-full border border-primary rounded bg-white px-3 py-2 mt-2 outline-none cursor-pointer"
             >
               <option value="COD">Cash On Delivery</option>
               <option value="Online">Online Payment</option>

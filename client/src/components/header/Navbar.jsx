@@ -14,7 +14,6 @@ const Navbar = () => {
     searchQuery,
     setSearchQuery,
     getCartCount,
-    products,
   } = useAppContext();
 
   const logout = async () => {
@@ -31,14 +30,14 @@ const Navbar = () => {
         <NavLink to="/" onClick={() => setOpen(false)}>
           <img src={assets.logo} alt="logo" />
         </NavLink>
-        <button
-          onClick={() => navigate("/seller")}
+        <NavLink
+          to="/seller"
           className="mx-2 text-[12px] md:text-xs text-primary/80 sm:border
           border-primary/60 rounded-full sm:px-2 sm:py-1
            hover:bg-primary-dull/10 font-medium cursor-pointer transition-all"
         >
           Seller Dashboard
-        </button>
+        </NavLink>
         <div className="hidden sm:flex items-center gap-6">
           <NavLink
             to="/"

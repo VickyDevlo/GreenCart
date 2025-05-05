@@ -33,7 +33,7 @@ const AddAddress = () => {
       <p className="text-2xl md:text-3xl text-gray-500 max-lg:text-center">
         Add Shipping <span className="text-primary font-semibold">Address</span>
       </p>
-      <div className="flex flex-col-reverse md:flex-row justify-between  md:mt-10">
+      <div className="flex flex-col-reverse md:flex-row justify-between md:mt-2">
         <div className="flex-1 w-full">
           <form onSubmit={onSubmitHandler} className="space-y-3 mt-6 text-sm">
             <div className="grid grid-cols-2 gap-4">
