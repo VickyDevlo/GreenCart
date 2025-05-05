@@ -46,7 +46,7 @@ const Cart = () => {
       <div className="flex flex-col md:flex-row mt-16 container mx-auto">
         {/* Cart Items Section */}
         <div className="flex-1 max-w-3xl overflow-y-auto md:px-4 md:max-h-[calc(100vh-130px)]">
-          <div className="sticky top-0 z-50  w-full shadow flex items-center justify-between flex-wrap gap-2 overflow-hidden backdrop-blur-md md:gap-0 md:px-4 py-6 mb-6">
+          <div className="sticky top-0 z-20 w-full shadow flex items-center justify-between flex-wrap gap-2 overflow-hidden backdrop-blur-md md:gap-0 md:px-4 py-6 mb-6">
             <h1 className="md:text-3xl font-medium">
               Shopping Cart
               {getCartCount() >= 1 ? (
