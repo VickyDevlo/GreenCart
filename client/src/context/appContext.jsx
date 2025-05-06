@@ -7,6 +7,8 @@ export const AppContext = createContext();
 export const AppContextProvider = ({ children }) => {
   let currency = import.meta.env.VITE_CURRENCY;
 
+  console.log(currency);
+
   const [user, setUser] = useState(null);
   const [isSeller, setIsSeller] = useState(false);
   const [showUserLogin, setShowUserLogin] = useState(false);
